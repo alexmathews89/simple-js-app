@@ -4,6 +4,18 @@ let pokemonRepository = (function () {
     { name: "Charizard", height: 1.7, types: ["fire", "flying"] },
     { name: "Articuno", height: 1.5, types: ["ice", "flying"] },
   ];
+
+  function add(pokemon) {
+    pokemonList.push(pokemon);
+  }
+
+  function getAll() {
+    return pokemonList;
+  }
+  return {
+    add: add,
+    getAll: getAll,
+  };
 })();
 
 // the array listed above is a list of pokemon
