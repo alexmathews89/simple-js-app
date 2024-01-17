@@ -17,4 +17,7 @@ let pokemonList = [
 
 pokemonList.forEach(function (pokemon) {
   document.write(" " + pokemon.name + "(height: " + pokemon.height + ")");
+  if (pokemon.height > 1.5) {
+    document.write(" -Wow, that's big!");
+  }
 });
