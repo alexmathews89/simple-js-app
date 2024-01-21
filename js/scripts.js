@@ -12,9 +12,20 @@ let pokemonRepository = (function () {
   function getAll() {
     return pokemonList;
   }
+  function addListItem(pokemon) {
+    let pokemonUnorderedList = document.querySelector(".pokemon-list");
+    let listItem = document.createElement("li");
+    let button = document.createElement("button");
+    button.innerText = pokemon.name;
+    button.classList.add("button-class");
+    listItem.appendChild(button);
+    pokemonUnorderedList.appendChild(listItem);
+  }
+
   return {
     add: add,
     getAll: getAll,
+    addListItem: addListItem,
   };
 })();
 
@@ -27,11 +38,5 @@ pokemonRepository.getAll().forEach(function (pokemon) {
 
   //}
 
-  let pokemonUnorderedList = document.querySelector(".pokemon-list");
-  let listItem = document.createElement("li");
-  let button = document.createElement("button");
-  button.innerText = pokemon.name;
-  button.classList.add("button-class");
-  listItem.appendChild(button);
-  pokemonUnorderedList.appendChild(listItem);
+  pokemonRepository.addListItem(pokemon);
 });
