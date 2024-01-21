@@ -11,3 +11,7 @@
   cursor: pointer;
   border: 2px solid #4caf50;
 }
+
+.pokemon-list {
+  list-style: none;
+}
