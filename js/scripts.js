@@ -22,6 +22,10 @@ let pokemonRepository = (function () {
     pokemonUnorderedList.appendChild(listItem);
   }
 
+  function showDetails(pokemon) {
+    console.log(pokemon);
+  }
+
   return {
     add: add,
     getAll: getAll,
