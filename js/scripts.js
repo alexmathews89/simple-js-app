@@ -22,10 +22,6 @@ let pokemonRepository = (function () {
     });
   }
 
-  function showDetails(pokemon) {
-    console.log(pokemon);
-  }
-
   function loadList() {
     return fetch(apiUrl)
       .then(function (response) {
@@ -61,12 +57,19 @@ let pokemonRepository = (function () {
       });
   }
 
+  function showDetails(item) {
+    pokemonRepository.loadDetails(item).then(function () {
+      console.log(item);
+    });
+  }
+
   return {
     add: add,
     getAll: getAll,
     addListItem: addListItem,
     loadList: loadList,
     loadDetails: loadDetails,
+    showDetails: showDetails,
   };
 })();
 
