@@ -1,9 +1,6 @@
 let pokemonRepository = (function () {
-  let pokemonList = [
-    { name: "Bulbasaur", height: 0.7, types: ["grass", "poison"] },
-    { name: "Charizard", height: 1.7, types: ["fire", "flying"] },
-    { name: "Articuno", height: 1.5, types: ["ice", "flying"] },
-  ];
+  let pokemonList = [];
+  let apiUrl = "https://pokeapi.co/api/v2/pokemon/?limit=150";
 
   function add(pokemon) {
     pokemonList.push(pokemon);
@@ -27,6 +24,25 @@ let pokemonRepository = (function () {
 
   function showDetails(pokemon) {
     console.log(pokemon);
+  }
+
+  function loadList() {
+    return fetch(apiUrl)
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (json) {
+        json.results.forEach(function (itme) {
+          let pokemon = {
+            name: itme.name,
+            detailsUrl: itme.url,
+          };
+          add(pokemon);
+        });
+      })
+      .catch(function (e) {
+        console.error(e);
+      });
   }
 
   return {
