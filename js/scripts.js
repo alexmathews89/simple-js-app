@@ -58,6 +58,11 @@ let pokemonRepository = (function () {
   }
 
   function showDetails(item) {
+    (function showModal() {
+      let modalContainer = document.querySelector("#modal-container");
+      modalContainer.classList.add("is-visible");
+    })();
+
     //pokemonRepository.loadDetails(item).then(function () {
     //console.log(item);
     //});
