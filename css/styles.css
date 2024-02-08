@@ -41,7 +41,7 @@
   text-align: center;
 }
 
-.modal {
+/*.modal {
   margin: auto;
   display: inline-block;
   box-sizing: border-box;
@@ -50,9 +50,9 @@
   width: 100%;
   max-width: 700px;
   text-align: left;
-}
+}*/
 
-.modal-close {
+/*.modal-close {
   float: right;
   border: 0;
   background: none;
@@ -66,8 +66,4 @@
 
 .modal p {
   margin-bottom: 0;
-}
-
-.page-title {
-  z-index: 999;
-}
+}*/

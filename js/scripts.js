@@ -17,6 +17,8 @@ let pokemonRepository = (function () {
     listItem.classList.add("list-group-item");
     button.classList.add("button-class");
     button.classList.add("btn-primary");
+    button.setAttribute("data-toggle", "modal");
+    button.setAttribute("data-target", "#exampleModal");
     listItem.appendChild(button);
     pokemonUnorderedList.appendChild(listItem);
     button.addEventListener("click", function (event) {
