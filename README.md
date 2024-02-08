@@ -10,3 +10,11 @@ pokemonRepository.loadDetails(item).then(function () {
 console.log(item);
 });
 }
+
+Old HTML Modal
+
+<!--<div class="modal">
+        <button class="modal-close">Close</button>
+        <h1>Modal title</h1>
+        <p>Modal text</p>
+      </div>-->
