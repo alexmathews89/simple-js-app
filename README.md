@@ -51,3 +51,24 @@ modalContainer.innerHTML = "";
     //showModal(item.name, item.height);
 
 }
+
+#modal-container.is-visible {
+position: fixed;
+padding: 20px;
+box-sizing: border-box;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgba(0, 0, 0, 0.5);
+
+/_ to show it above other content _/
+z-index: 999;
+
+/_ to allow scrolling if the screen is not high enough_/
+overflow: auto;
+
+/_ this is used to center the modal _/
+display: grid;
+text-align: center;
+}
