@@ -52,6 +52,7 @@ modalContainer.innerHTML = "";
 
 }
 
+Old CSS Modal container
 #modal-container.is-visible {
 position: fixed;
 padding: 20px;
@@ -72,3 +73,81 @@ overflow: auto;
 display: grid;
 text-align: center;
 }
+
+Old CSS normalize link
+
+ <!--<link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />-->
+
+Old JS modal container functions
+//function hideModal() {
+//let modalContainer = document.querySelector("#modal-container");
+//modalContainer.classList.remove("is-visible");
+//}
+
+//window.addEventListener("keydown", (e) => {
+//let modalContainer = document.querySelector("#modal-container");
+//if (e.key === "Escape" && modalContainer.classList.contains("is-visible")) {
+//hideModal();
+//}
+//});
+
+//let modalContainer = document.querySelector("#modal-container");
+//modalContainer.addEventListener("click", (e) => {
+//let target = e.target;
+//if (target === modalContainer) {
+//hideModal();
+//}
+//});
+
+Old JS Pokemon Repository loop
+// the array listed above is a list of pokemon
+
+//pokemonRepository.getAll().forEach(function (pokemon) {
+//document.write(" " + pokemon.name + "(height: " + pokemon.height + ")");
+//if (pokemon.height > 1.5) {
+//document.write(" -Wow, that's big!");
+
+//}
+
+//pokemonRepository.addListItem(pokemon);
+//});
+
+Old CSS Modal/Modal Container code
+/_.pokemon-list {
+list-style: none;
+}_/
+
+/_#modal-container {
+display: none;
+}_/
+
+/_.modal {
+margin: auto;
+display: inline-block;
+box-sizing: border-box;
+background: #fff;
+padding: 15px;
+width: 100%;
+max-width: 700px;
+text-align: left;
+}_/
+
+/\*.modal-close {
+float: right;
+border: 0;
+background: none;
+color: #777;
+text-decoration: underline;
+}
+
+.modal h1 {
+margin-top: 0;
+}
+
+.modal p {
+margin-bottom: 0;
+}\*/
