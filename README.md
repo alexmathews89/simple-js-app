@@ -1,3 +1,10 @@
+Project Description: A simple application that displays a the image, name, and height of a pokemon with the click of a button.
+
+Application uses Jquery, Bootstrap, ES6 and basic ESLint default rules.
+
+API used: https://pokeapi.co/api/v2/pokemon/?limit=150
+
+Old Project Code Below:
 //[
 //{ name: "Bulbasaur", height: 0.7, types: ["grass", "poison"] },
 //{ name: "Charizard", height: 1.7, types: ["fire", "flying"] },
