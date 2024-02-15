@@ -21,7 +21,7 @@ let pokemonRepository = (function () {
     button.setAttribute("data-target", "#exampleModal");
     listItem.appendChild(button);
     pokemonUnorderedList.appendChild(listItem);
-    button.addEventListener("click", function (event) {
+    button.addEventListener("click", function () {
       showDetails(pokemon);
     });
   }
@@ -64,14 +64,13 @@ let pokemonRepository = (function () {
   function showModal(pokemon) {
     let modalBody = $(".modal-body");
     let modalTitle = $(".modal-title");
-    let modalHeader = $("modal-header");
 
     modalTitle.empty();
     modalBody.empty();
 
     let nameElement = $("<h1>" + pokemon.name + "</h1>");
 
-    let imageElement = $('<img class="modal-img" style="width:50%">');
+    let imageElement = $("<img class='modal-img' style='width:50%'>");
     imageElement.attr("src", pokemon.imageUrl);
 
     let heightElement = $("<p>" + "height : " + pokemon.height + "</p>");
