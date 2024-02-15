@@ -12,12 +12,10 @@ let pokemonRepository = (function () {
       let n, o, i, a, l;
       (e = t),
         (n = $(".modal-body")),
-        (o = $(".modal-title")),
-        $("modal-header"),
-        o.empty(),
+        (o = $(".modal-title")).empty(),
         n.empty(),
         (i = $("<h1>" + e.name + "</h1>")),
-        (a = $('<img class="modal-img" style="width:50%">')).attr(
+        (a = $("<img class='modal-img' style='width:50%'>")).attr(
           "src",
           e.imageUrl
         ),
@@ -42,7 +40,7 @@ let pokemonRepository = (function () {
         a.setAttribute("data-target", "#exampleModal"),
         i.appendChild(a),
         n.appendChild(i),
-        a.addEventListener("click", function (t) {
+        a.addEventListener("click", function () {
           o(e);
         });
     },
